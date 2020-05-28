@@ -5,7 +5,8 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { HomePage } from "./SAMPLE/sample_pages/HomePage";
 import { About } from "./SAMPLE/sample_pages/About";
 import { Topics } from "./SAMPLE/sample_pages/Topics";
-import { PageError } from "./SAMPLE/sample_pages/PageError";
+//import UserProfile from "./SAMPLE/sample_pages/UserProfile/UserProfile";
+//import { PageError } from "./SAMPLE/sample_pages/PageError";
 
 //COMPONENTS
 import { MyContainer } from "./SAMPLE/sample_components/MyContainer";
@@ -18,39 +19,45 @@ const appRoutes = [
     exact: true,
     title: "My Products",
     layout: "/challenge",
-    component: HomePage
+    component: HomePage,
   },
   {
     path: "/app",
     redirect: "/app/home",
     title: "My Products",
     layout: "/challenge",
-    component: HomePage
+    component: HomePage,
   },
   {
     path: "/app/home",
     title: "My Products",
     layout: "/challenge",
-    component: HomePage
+    component: HomePage,
   },
   {
     path: "/about",
     title: "Add Product",
     layout: "/challenge",
-    component: About
+    component: About,
   },
   {
     path: "/topics",
     title: "My Topics",
     layout: "/challenge",
-    component: Topics
+    component: Topics,
   },
   {
     path: "/topics/:id",
     title: "Edit My Topics",
     layout: "/challenge",
-    component: Topics
-  }
+    component: Topics,
+  },
+  // {
+  //   path: '/topics',
+  //   title: 'User Profile',
+  //   layout: '/challenge',
+  //   component: UserProfile,
+  // },
 ];
 
 const switchRoutes = appRoutes.map((prop, key) => {
@@ -69,16 +76,16 @@ const switchRoutes = appRoutes.map((prop, key) => {
   return null;
 });
 
-const estilos = makeStyles(theme => ({
+const estilos = makeStyles((theme) => ({
   root: {
-    display: "flex"
+    display: "flex",
   },
   toolbar: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(2)
-  }
+    padding: theme.spacing(2),
+  },
 }));
 
 //TODO: Cambiar a Layout ROUTER, separar vista de logica

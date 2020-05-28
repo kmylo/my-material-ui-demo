@@ -1,0 +1,34 @@
+{
+  "jsxBracketSameLine": false,
+  "parser": "flow",
+  "printWidth": 80,
+  "arrowParens": "always",
+  "trailingComma": "es5",
+  "semi": true,
+  "overrides": [
+    {
+      "files": "*.test.js",
+      "options": {
+        "semi": true
+      }
+    },
+    {
+      "files": ".prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    },
+    {
+      "files": "*.{ts,tsx}",
+      "options": {
+        "semi": true
+      }
+    },
+    {
+      "files": "docs/src/examples/**/*.js",
+      "options": {
+        "printWidth": 80
+      }
+    }
+  ]
+}

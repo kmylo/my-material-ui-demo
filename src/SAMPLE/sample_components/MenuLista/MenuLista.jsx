@@ -9,7 +9,7 @@ import {
   ListItem,
   ListItemText,
   Paper,
-  Typography,
+  // Typography,
 } from "@material-ui/core";
 
 import { MapLinks } from "./";

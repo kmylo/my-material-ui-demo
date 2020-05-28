@@ -16,32 +16,6 @@ const useStyles = makeStyles({
     minWidth: 240,
   },
 });
-const tableData2 = [
-  {
-    number: "001003",
-    name: "Green pencil",
-    date: "2020-10-10",
-    sku: 229,
-    weight: "0.02kg",
-    height: "20cm",
-    width: "2cm",
-    origin: "Singapore",
-    minimum: 100,
-    delay: "30 days",
-  },
-  {
-    number: "001004",
-    name: "Red pencil",
-    date: "2020-10-10",
-    sku: 243,
-    weight: "0.02kg",
-    height: "20cm",
-    width: "2cm",
-    origin: "Singapore",
-    minimum: 100,
-    delay: "30 days",
-  },
-];
 
 const columns = [
   { path: "item", label: "Item" },
@@ -69,7 +43,7 @@ export default function SimpleTable04() {
             return (
               <TableRow key={idx}>
                 {columns.map((col, idy) => {
-                  if (col.path == "item")
+                  if (col.path === "item")
                     return <TableCell key={idy}>{idx}</TableCell>;
                   return <TableCell key={idy}>{row[col.path]}</TableCell>;
                 })}

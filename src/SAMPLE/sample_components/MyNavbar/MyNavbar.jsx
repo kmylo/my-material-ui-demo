@@ -6,32 +6,31 @@ import {
   Toolbar,
   Typography,
   IconButton,
-  Button
+  Button,
 } from "@material-ui/core";
 
 import MenuIcon from "@material-ui/icons/Menu";
-import { SampleNav } from "../SampleNav";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up("mm")]: {
-      display: "none"
-    }
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    },
   },
   title: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   offset: theme.mixins.toolbar,
   AppBar: {
     [theme.breakpoints.up("md")]: {
       width: `calc(100% - ${240}px)`,
-      marginLeft: 240
-    }
-  }
+      marginLeft: 240,
+    },
+  },
 }));
 
-const MyNavbar = props => {
+const MyNavbar = (props) => {
   const classes = useStyles();
   const { handleDrawerToggle } = props;
   return (
@@ -53,7 +52,7 @@ const MyNavbar = props => {
           <Typography className={classes.title} variant="h6">
             Pat-Challenge
           </Typography>
-          <SampleNav />
+
           <Button variant="outlined" color="inherit">
             Login
           </Button>

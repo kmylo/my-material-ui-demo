@@ -1,0 +1,32 @@
+.list-group {
+  display: flex;
+  flex-direction: column;  
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+
+.list-group-item {
+  position: relative;
+  display: block;
+}
+
+.nav-container{
+  //background-color: #d9cfe7;
+  //padding: 1rem;
+  margin-top: 20px;
+  margin-right: 0;
+  margin-left: 0;  
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: .5rem 1rem;
+}

@@ -52,12 +52,13 @@ const appRoutes = [
     layout: "/challenge",
     component: Topics,
   },
-  // {
-  //   path: '/topics',
-  //   title: 'User Profile',
-  //   layout: '/challenge',
-  //   component: UserProfile,
-  // },
+  {
+    path: "/user-profile",
+    title: "User Profile",
+    layout: "/challenge",
+    //component: Topics,
+    // component: UserProfile,
+  },
 ];
 
 const switchRoutes = appRoutes.map((prop, key) => {

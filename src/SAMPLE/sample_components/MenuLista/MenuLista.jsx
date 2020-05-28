@@ -15,9 +15,12 @@ import {
 } from "@material-ui/core";
 
 //import Avatar from "@material-ui/core/Avatar";
-import ImageIcon from "@material-ui/icons/Image";
-import WorkIcon from "@material-ui/icons/Work";
+
 import Divider from "@material-ui/core/Divider";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import ImageIcon from "@material-ui/icons/Image";
+import LocalGroceryStoreIcon from "@material-ui/icons/LocalGroceryStore";
+import WorkIcon from "@material-ui/icons/Work";
 import InboxIcon from "@material-ui/icons/Inbox";
 import DraftsIcon from "@material-ui/icons/Drafts";
 
@@ -47,6 +50,21 @@ const ItemLinks = [
     primary: "Topics",
     to: "/topics",
     icon: () => <WorkIcon />,
+  },
+  {
+    primary: "User Profile",
+    to: "/user-profile",
+    icon: () => <AccountCircleIcon />,
+  },
+  {
+    primary: "Gallery",
+    to: "/gallery",
+    icon: () => <ImageIcon />,
+  },
+  {
+    primary: "Products",
+    to: "/products",
+    icon: () => <LocalGroceryStoreIcon />,
   },
 ];
 function ListItemLink(props) {
@@ -110,11 +128,8 @@ const MenuLista = (props) => {
               <ListItemText primary="MENU" />
             </ListItem>
             <Divider /> {/*TODO: refactor divider dynamic */}
+            {/* List Items */}
             {MapLinks}
-            <ListItemLink to="/home" primary="Home" icon={<ImageIcon />} />
-            <ListItemLink to="/about" primary="About" icon={<DraftsIcon />} />
-            <ListItemLink to="/topics" primary="Topics" icon={<WorkIcon />} />
-            {/* List Item */}
           </List>
         </Paper>
       </div>

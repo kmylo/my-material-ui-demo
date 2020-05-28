@@ -1,28 +1,21 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import { Route } from "react-router";
 //import { MemoryRouter } from "react-router";
-import { Link as RouterLink } from "react-router-dom";
 
 import {
+  Divider,
   makeStyles,
   List,
   ListItem,
-  ListItemIcon,
   ListItemText,
   Paper,
   Typography,
 } from "@material-ui/core";
 
-//import Avatar from "@material-ui/core/Avatar";
+import { MapLinks } from "./";
 
-import Divider from "@material-ui/core/Divider";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import ImageIcon from "@material-ui/icons/Image";
-import LocalGroceryStoreIcon from "@material-ui/icons/LocalGroceryStore";
-import WorkIcon from "@material-ui/icons/Work";
-import InboxIcon from "@material-ui/icons/Inbox";
-import DraftsIcon from "@material-ui/icons/Drafts";
+//import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,79 +24,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
 }));
-
-//https://material-ui.com/es/guides/minimizing-bundle-size/
-//https://material-ui.com/es/guides/composition/
-
-const ItemLinks = [
-  {
-    primary: "Home",
-    to: "/app/home",
-    icon: () => <InboxIcon />,
-  },
-  {
-    primary: "About",
-    to: "/about",
-    icon: () => <DraftsIcon />,
-  },
-  {
-    primary: "Topics",
-    to: "/topics",
-    icon: () => <WorkIcon />,
-  },
-  {
-    primary: "User Profile",
-    to: "/user-profile",
-    icon: () => <AccountCircleIcon />,
-  },
-  {
-    primary: "Gallery",
-    to: "/gallery",
-    icon: () => <ImageIcon />,
-  },
-  {
-    primary: "Products",
-    to: "/products",
-    icon: () => <LocalGroceryStoreIcon />,
-  },
-];
-function ListItemLink(props) {
-  const { icon, primary, to } = props;
-
-  const renderLink = React.useMemo(
-    () =>
-      React.forwardRef((itemProps, ref) => (
-        <RouterLink to={to} ref={ref} {...itemProps} />
-      )),
-    [to]
-  );
-
-  return (
-    <li>
-      <ListItem button component={renderLink}>
-        {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
-        <ListItemText primary={primary} />
-      </ListItem>
-    </li>
-  );
-}
-ListItemLink.propTypes = {
-  icon: PropTypes.element,
-  //primary: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired,
-};
-
-const MapLinks = ItemLinks.map((prop, key) => {
-  const { primary, to, icon } = prop;
-  return (
-    <ListItemLink
-      key={key}
-      primary={primary}
-      to={to}
-      icon={React.createElement(icon)}
-    />
-  );
-});
 
 const MenuLista = (props) => {
   const classes = useStyles();
@@ -138,4 +58,4 @@ const MenuLista = (props) => {
   );
 };
 
-export { MenuLista };
+export default MenuLista;

@@ -9,21 +9,6 @@ import DraftsIcon from "@material-ui/icons/Drafts";
 
 const ItemLinks = [
   {
-    primary: "Home",
-    to: "/app/home",
-    icon: () => <InboxIcon />,
-  },
-  {
-    primary: "About",
-    to: "/about",
-    icon: () => <DraftsIcon />,
-  },
-  {
-    primary: "Topics",
-    to: "/topics",
-    icon: () => <WorkIcon />,
-  },
-  {
     primary: "User Profile",
     to: "/user-profile",
     icon: () => <AccountCircleIcon />,
@@ -37,6 +22,21 @@ const ItemLinks = [
     primary: "Products",
     to: "/products",
     icon: () => <LocalGroceryStoreIcon />,
+  },
+  {
+    primary: "Home",
+    to: "/app/home",
+    icon: () => <InboxIcon />,
+  },
+  {
+    primary: "About",
+    to: "/about",
+    icon: () => <DraftsIcon />,
+  },
+  {
+    primary: "Topics",
+    to: "/topics",
+    icon: () => <WorkIcon />,
   },
 ];
 

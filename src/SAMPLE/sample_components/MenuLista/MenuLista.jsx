@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Route } from "react-router";
 //import { MemoryRouter } from "react-router";
 
@@ -14,8 +13,6 @@ import {
 } from "@material-ui/core";
 
 import { MapLinks } from "./";
-
-//import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,15 +37,12 @@ const MenuLista = (props) => {
           )}
         </Route>
         <Divider />
-
         <Paper elevation={0}>
           <List component="nav" aria-label="main navigation folders">
-            {/* List Item */}
             <ListItem>
               <ListItemText primary="MENU" />
             </ListItem>
             <Divider /> {/*TODO: refactor divider dynamic */}
-            {/* List Items */}
             {MapLinks}
           </List>
         </Paper>

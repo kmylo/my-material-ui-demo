@@ -1,26 +1,10 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 //COMPONENTS
 import { MyContainer } from "./SAMPLE/sample_components/MyContainer";
 import { Typography, makeStyles } from "@material-ui/core";
-import { appRoutes } from "./configs/routes";
-
-const switchRoutes = appRoutes.map((prop, key) => {
-  const { path, component, exact } = prop;
-  if (prop.layout === "/challenge") {
-    return (
-      <Route
-        key={key}
-        path={path}
-        component={component}
-        exact={exact}
-        redirect={() => <Redirect to="{prop.redirect}" />}
-      />
-    );
-  }
-  return null;
-});
+import { switchRoutes } from "./configs/routes";
 
 const estilos = makeStyles((theme) => ({
   root: {
@@ -33,8 +17,6 @@ const estilos = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
 }));
-
-//TODO: Cambiar a Layout ROUTER, separar vista de logica
 
 const Router = () => {
   const classes = estilos();
@@ -70,3 +52,6 @@ const Router = () => {
 };
 
 export default Router;
+
+//TODO: Cambiar a Layout ROUTER, separar vista de logica
+//TODO: revisar el redirect y page error

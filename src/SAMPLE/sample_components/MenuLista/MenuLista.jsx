@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Route, MemoryRouter } from "react-router";
+import { Route } from "react-router";
+//import { MemoryRouter } from "react-router";
 import { Link as RouterLink } from "react-router-dom";
 
 import {
@@ -10,22 +11,22 @@ import {
   ListItemIcon,
   ListItemText,
   Paper,
-  Typography
+  Typography,
 } from "@material-ui/core";
 
-import Avatar from "@material-ui/core/Avatar";
+//import Avatar from "@material-ui/core/Avatar";
 import ImageIcon from "@material-ui/icons/Image";
 import WorkIcon from "@material-ui/icons/Work";
 import Divider from "@material-ui/core/Divider";
 import InboxIcon from "@material-ui/icons/Inbox";
 import DraftsIcon from "@material-ui/icons/Drafts";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
     maxWidth: 360,
-    backgroundColor: theme.palette.background.paper
-  }
+    backgroundColor: theme.palette.background.paper,
+  },
 }));
 
 //https://material-ui.com/es/guides/minimizing-bundle-size/
@@ -35,18 +36,18 @@ const ItemLinks = [
   {
     primary: "Home",
     to: "/app/home",
-    icon: () => <InboxIcon />
+    icon: () => <InboxIcon />,
   },
   {
     primary: "About",
     to: "/about",
-    icon: () => <DraftsIcon />
+    icon: () => <DraftsIcon />,
   },
   {
     primary: "Topics",
     to: "/topics",
-    icon: () => <WorkIcon />
-  }
+    icon: () => <WorkIcon />,
+  },
 ];
 function ListItemLink(props) {
   const { icon, primary, to } = props;
@@ -71,7 +72,7 @@ function ListItemLink(props) {
 ListItemLink.propTypes = {
   icon: PropTypes.element,
   //primary: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
 };
 
 const MapLinks = ItemLinks.map((prop, key) => {
@@ -86,7 +87,7 @@ const MapLinks = ItemLinks.map((prop, key) => {
   );
 });
 
-const MenuLista = props => {
+const MenuLista = (props) => {
   const classes = useStyles();
 
   return (

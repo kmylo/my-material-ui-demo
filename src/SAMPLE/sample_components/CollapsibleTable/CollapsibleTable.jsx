@@ -18,9 +18,9 @@ import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 const useRowStyles = makeStyles({
   root: {
     "& > *": {
-      borderBottom: "unset"
-    }
-  }
+      borderBottom: "unset",
+    },
+  },
 });
 
 function createData(name, calories, fat, carbs, protein, price) {
@@ -33,8 +33,8 @@ function createData(name, calories, fat, carbs, protein, price) {
     price,
     history: [
       { date: "2020-01-05", customerId: "11091700", amount: 3 },
-      { date: "2020-01-02", customerId: "Anonymous", amount: 1 }
-    ]
+      { date: "2020-01-02", customerId: "Anonymous", amount: 1 },
+    ],
   };
 }
 
@@ -80,7 +80,7 @@ function Row(props) {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {row.history.map(historyRow => (
+                  {row.history.map((historyRow) => (
                     <TableRow key={historyRow.date}>
                       <TableCell component="th" scope="row">
                         {historyRow.date}
@@ -111,13 +111,13 @@ Row.propTypes = {
       PropTypes.shape({
         amount: PropTypes.number.isRequired,
         customerId: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired
+        date: PropTypes.string.isRequired,
       })
     ).isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    protein: PropTypes.number.isRequired
-  }).isRequired
+    protein: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 const rows = [
@@ -125,7 +125,7 @@ const rows = [
   createData("Ice cream sandwich", 237, 9.0, 37, 4.3, 4.99),
   createData("Eclair", 262, 16.0, 24, 6.0, 3.79),
   createData("Cupcake", 305, 3.7, 67, 4.3, 2.5),
-  createData("Gingerbread", 356, 16.0, 49, 3.9, 1.5)
+  createData("Gingerbread", 356, 16.0, 49, 3.9, 1.5),
 ];
 
 export default function CollapsibleTable() {
@@ -143,7 +143,7 @@ export default function CollapsibleTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
+          {rows.map((row) => (
             <Row key={row.name} row={row} />
           ))}
         </TableBody>

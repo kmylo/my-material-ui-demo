@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router";
+//import { Route } from "react-router";
 //import { MemoryRouter } from "react-router";
 
 import {
@@ -29,14 +29,14 @@ const MenuLista = (props) => {
     <React.Fragment>
       {/* <MemoryRouter initialEntries={["/drafts"]} initialIndex={0}> */}
       <div className={classes.root}>
-        <Route>
+        {/* <Route>
           {({ location }) => (
             <Typography gutterBottom p={3}>
               Current route: {location.pathname}
             </Typography>
           )}
         </Route>
-        <Divider />
+        <Divider /> */}
         <Paper elevation={0}>
           <List component="nav" aria-label="main navigation folders">
             <ListItem>

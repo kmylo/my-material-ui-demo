@@ -22,6 +22,13 @@ const columns = [
   { path: "number", label: "Number" },
   { path: "name", label: "Name" },
   { path: "date", label: "Date" },
+  { path: "sku", label: "Sku" },
+  { path: "weight", label: "Weight" },
+  { path: "height", label: "Height" },
+  { path: "width", label: "Width" },
+  { path: "origin", label: "Origin" },
+  { path: "minimum", label: "Minimum" },
+  { path: "delay", label: "Delay" },
 ];
 
 export default function SimpleTable04() {

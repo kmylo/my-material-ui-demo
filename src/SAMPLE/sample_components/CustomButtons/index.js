@@ -1,1 +1,2 @@
-export * from "./CustomButtons";
+import RegularButton from "./Button";
+export { RegularButton };

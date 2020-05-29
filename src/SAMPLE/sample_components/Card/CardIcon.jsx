@@ -1,29 +1,29 @@
 import React from "react";
 // nodejs library that concatenates classes
-import classNames from "classnames";
+// import classNames from "classnames";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 
 // core components
-import styles from "assets/jss/material-dashboard-react/components/cardIconStyle.js";
+// import styles from "assets/jss/material-dashboard-react/components/cardIconStyle.js";
 
-const useStyles = makeStyles(styles);
+// const useStyles = makeStyles(styles);
 
 export default function CardIcon(props) {
-  const classes = useStyles();
-  const { className, children, color, ...rest } = props;
-  const cardIconClasses = classNames({
-    [classes.cardIcon]: true,
-    [classes[color + "CardHeader"]]: color,
-    [className]: className !== undefined
-  });
+  // const classes = useStyles();
+  // const { className, children, color, ...rest } = props;
+  const { children, ...rest } = props;
+  // const cardIconClasses = classNames({
+  //   [classes.cardIcon]: true,
+  //   [classes[color + "CardHeader"]]: color,
+  //   [className]: className !== undefined
+  // });
   return (
-    <div className={cardIconClasses} {...rest}>
-      {children}
-    </div>
+    // <div className={cardIconClasses} {...rest}>
+    <div {...rest}>{children}</div>
   );
 }
 
@@ -35,7 +35,7 @@ CardIcon.propTypes = {
     "danger",
     "info",
     "primary",
-    "rose"
+    "rose",
   ]),
-  children: PropTypes.node
+  children: PropTypes.node,
 };

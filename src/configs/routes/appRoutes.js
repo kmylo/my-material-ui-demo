@@ -4,8 +4,10 @@ import { About } from "../../SAMPLE/sample_pages/About";
 import { Gallery } from "../../SAMPLE/sample_pages/Gallery";
 import { Products } from "../../SAMPLE/sample_pages/Products";
 import { Topics } from "../../SAMPLE/sample_pages/Topics";
-//import UserProfile from "./SAMPLE/sample_pages/UserProfile/UserProfile";
-//import { PageError } from "./SAMPLE/sample_pages/PageError";
+
+import { UserProfile } from "../../SAMPLE/sample_pages/UserProfile";
+
+//import { PageError } from "../../SAMPLE/sample_pages/PageError";
 
 const appRoutes = [
   {
@@ -64,7 +66,7 @@ const appRoutes = [
     title: "User Profile",
     layout: "/challenge",
     //component: Topics,
-    // component: UserProfile,
+    component: UserProfile,
   },
 ];
 
